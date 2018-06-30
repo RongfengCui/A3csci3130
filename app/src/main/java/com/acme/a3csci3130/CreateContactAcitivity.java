@@ -22,8 +22,6 @@ public class CreateContactAcitivity extends Activity {
         setContentView(R.layout.activity_create_contact_acitivity);
         //Get the app wide shared variables
         appState = ((MyApplicationData) getApplicationContext());
-
-
         submitButton = (Button) findViewById(R.id.submitButton);
         nameField = (EditText) findViewById(R.id.name);
         numberField = (EditText) findViewById(R.id.number);
