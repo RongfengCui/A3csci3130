@@ -11,6 +11,13 @@ import android.widget.TextView;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.database.FirebaseDatabase;
 
+
+
+/**
+ * This class shows the list of all businesses in the database
+ * Coontaining a button to create a new business in the activity
+ * Having a function og updating and deleting Listitem
+ */
 public class MainActivity extends Activity {
 
 
@@ -52,12 +59,20 @@ public class MainActivity extends Activity {
         });
     }
 
+    /**
+     * Opening the CreateContactActivity after clicking the button
+     * @param v (the current view)
+     */
     public void createContactButton(View v)
     {
         Intent intent=new Intent(this, CreateContactAcitivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Opening the DetailViewActivity after clicking one of the object in listview
+     * @param person (containing a business information)
+     */
     private void showDetailView(Contact person)
     {
         Intent intent = new Intent(this, DetailViewActivity.class);

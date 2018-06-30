@@ -14,12 +14,20 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
+/**
+ * This test ia aim to creating a business listitem
+ * Checking the value is existed or not after creating the listitem
+ */
 public class CreateTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(MainActivity.class);
     @Test
     public void createTest() throws Exception {
+
+        //click the button to create a new business
         onView(withId(R.id.submitButton)).perform(click());
+
+        //add the value
         onView(withId(R.id.number)).perform(typeText("123456789"));
         onView(withId(R.id.name)).perform(typeText("jeffery"));
         onView(withId(R.id.primaryBusiness)).perform(typeText("Fisher"));
@@ -27,8 +35,14 @@ public class CreateTest {
         onView(withId(R.id.address)).perform(typeText("robie"));
         onView(withId(R.id.province)).perform(typeText("NS"));
         onView(withId(R.id.province)).perform(closeSoftKeyboard());
+
+        //click the button to submit
         onView(withId(R.id.submitButton)).perform(click());
+
+        //click the business we submitted just now
         onData(org.hamcrest.Matchers.anything()).inAdapterView(withId(R.id.listView)).atPosition(0).perform(click());
+
+        //check the value in this business are same or not
         onView(withId(R.id.number)).check(matches(withText("123456789")));
         onView(withId(R.id.name)).check(matches(withText("jeffery")));
         onView(withId(R.id.primaryBusiness)).check(matches(withText("Fisher")));

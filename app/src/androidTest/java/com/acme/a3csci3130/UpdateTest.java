@@ -14,6 +14,12 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.anything;
 
+/**
+ * This test is aim to check whether the app can update the information
+ * The test will click first business in listview
+ * Then it will change the province
+ * Clicking the update button
+ */
 public class UpdateTest {
     @Rule
     public final ActivityTestRule<MainActivity> main = new ActivityTestRule<>(MainActivity.class);

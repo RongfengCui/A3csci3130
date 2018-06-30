@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/** Create a new contact activity, which add some new variables.
+ * Pushing the data to firebase after clicking the button to submit
+ */
+
 public class CreateContactAcitivity extends Activity {
 
     private Button submitButton;

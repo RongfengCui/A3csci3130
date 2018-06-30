@@ -7,8 +7,16 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
+/**
+ * @author Rongfeng Cui
+ * Class that defines how the data will be stored in the
+ * Firebase database. This is converted to a JSON format.
+ * business number need unique 9 digits
+ * name need 2-48 characters
+ * primaryBusiness need to be one of Fisher,Distributor,Processor,Fish Monger
+ * address need to be less than 50 characters
+ * province need to be one of AB,BC,MB,NB,NL,NS,NT,NU,ON,PE,QC,SK,YT
+ */
 
 public class Contact implements Serializable {
 

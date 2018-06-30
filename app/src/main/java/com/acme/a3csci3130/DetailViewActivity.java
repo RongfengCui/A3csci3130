@@ -8,7 +8,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-
+/**
+ * this class is used to get the current information from the listview
+ * in order to read, update, and delete the business list
+ */
 public class DetailViewActivity extends Activity {
 
     private EditText nameField, numberField, primaryBusinessField, addressField, provinceField;
@@ -37,7 +40,10 @@ public class DetailViewActivity extends Activity {
         }
     }
 
-
+    /**
+     * update value value from one of specific business from current viewlist
+     * @param  v (the current view)
+     */
     public void updateContact(View v){
         //TODO: Update contact funcionality
 
@@ -54,7 +60,10 @@ public class DetailViewActivity extends Activity {
         finish();
     }
 
-
+    /**
+     * delete the value from one of specific business from current viewlist
+     * @param v (the current view)
+     */
     public void eraseContact(View v)
     {
         //TODO: Erase contact functionality
